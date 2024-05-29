@@ -1,0 +1,15 @@
+#background{
+    width: 1313px;
+    height: 625px;
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    z-index: 1;
+}
+#note {
+    width: 100px;
+    position: absolute;
+    top: 70px; 
+    left: 700px; 
+    z-index: 2;
+}
