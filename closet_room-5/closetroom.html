@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Closet room</title>
+    <title>Tic-Tac-Toe</title>
     <script src="closetroom.js"></script>
     <link rel="stylesheet" type="text/css" href="closetroom.css">
 </head>
 <body>
-    <img src="closet room.jpg" id="background">
     
+    <button onclick="generateGame()"> <img src="safe.webp" id="safe"></button>
+    <div class="game-area" id="game-area">
+        <input type="button" onclick="compTrue()" name="Start" value="Start" id="start">
+        <div class="game-board" id="game-board"></div>
+            <button id="tryagain" onclick="generateGame()">Try again</button>
+    </div>
+
 </body>
 </html>
