@@ -1,105 +1,101 @@
-var y="x"
 var Xscore = 0;
 var Oscore = 0;
-
-var compturn = false;
+var gameEnded = false; // Flag to check if the game has ended
+var currentPlayer = 'x'; // Track the current player
 
 function generateGame(){
-    var tryagain=document.getElementById("tryagain").style.visibility="hidden";
-    alert("To know the next clue, you'll have to beat me! Click the start button to try to find the clue!")
-    var start=document.getElementById("start").style.visibility="visible";
+    var tryagain = document.getElementById("tryagain").style.visibility = "hidden";
+    alert("To know the next clue, you'll have to beat me! Click the start button to try to find the clue!");
+    var start = document.getElementById("start").style.visibility = "visible";
     x = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     o = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     counter = 0;
-    document.getElementById("game-board").innerHTML="";
-    var buttonId = 0
-    for(let row = 0; row<  3; row++){
-        for(let col = 0; col < 3; col++){
-        var button = document.createElement("input");
-        button.setAttribute("type", "button");
-        button.setAttribute("class", "grid-cell");
-        button.setAttribute("onclick", "markCheck(this)");
-        button.setAttribute("value", " ");
-        document.getElementById("game-board").appendChild(button);
-        button.setAttribute("id", buttonId)
-        buttonId++
-        console.log(buttonId)
+    gameEnded = false; // Reset the game end flag
+    document.getElementById("game-board").innerHTML = "";
+    var buttonId = 0;
+    for (let row = 0; row < 3; row++) {
+        for (let col = 0; col < 3; col++) {
+            var button = document.createElement("input");
+            button.setAttribute("type", "button");
+            button.setAttribute("class", "grid-cell");
+            button.setAttribute("onclick", "markCheck(this)");
+            button.setAttribute("value", " ");
+            document.getElementById("game-board").appendChild(button);
+            button.setAttribute("id", buttonId);
+            buttonId++;
         }
-        var breakline = document.createElement("br")
+        var breakline = document.createElement("br");
         document.getElementById("game-board").appendChild(breakline);
     }
+    currentPlayer = 'x'; // Set the user as the first player
 }
 
-const patterns= [[0,0,0,1,1,1,0,0,0],
-[1,1,1,0,0,0,0,0,0],
-[0,0,0,0,0,0,1,1,1],
-[1,0,0,0,1,0,0,0,1],
-[1,0,0,1,0,0,1,0,0],
-[0,1,0,0,1,0,0,1,0],
-[0,0,1,0,0,1,0,0,1],
-[0,0,1,0,1,0,1,0,0]]
+const patterns = [
+    [0, 0, 0, 1, 1, 1, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 1, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 1, 0, 0, 1, 0, 0],
+    [0, 1, 0, 0, 1, 0, 0, 1, 0],
+    [0, 0, 1, 0, 0, 1, 0, 0, 1],
+    [0, 0, 1, 0, 1, 0, 1, 0, 0]
+];
 
 var x = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var o = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-var counter = 0
-
-//obj זה הכפתור שלוחצים אליו
+var counter = 0;
 function markCheck(obj){
-    counter = counter + 1
+    if (gameEnded || obj.value !== " ") return; // Prevent further moves if the game has ended or cell is not empty
 
-    if (y=="x"){
+    counter++;
+
+    if (currentPlayer == "x"){
         obj.setAttribute("value", "x");
         obj.setAttribute("class", "red-player");
         console.log("player X marked", obj.id);
-        x[obj.id]=1
-    }
-
-    else if (y=="o"){
-        obj.setAttribute("value", "o");
-        obj.setAttribute("class", "green-player");
-        console.log("player o marked", obj.id)
-        o[obj.id]=1
+        x[obj.id] = 1;
+        currentPlayer = "o"; // Switch to computer's turn
+        obj.setAttribute("disabled", "disabled");
     }
 
     var xwin = checkPlayerHasAnyWinningPattern(x);
     var owin = checkPlayerHasAnyWinningPattern(o);
 
-    obj.setAttribute("disabled", "disabled");
-
-    if (counter == 9 && !xwin && !owin) {
-        alert("Draw! Try again(click on the safe again)");
-        var tryagain=document.getElementById("tryagain").style.visibility="visible";
-    }
     if (xwin == true){
+        gameEnded = true; // Set the flag to indicate the game has ended
         EndGame();
-        window.alert("Oh, you won, but it's not the end!");
+        window.alert("Oh, you won, but it's not the end! The clue is that the thief didn't have red hair! Click on go back to homepage!");
+        var homepage = document.getElementById("homepage").style.visibility = "visible";
+        return; // Exit to prevent further moves
+    } else if (counter == 9) {
+        alert("Draw! Try again (click on the safe again)");
+        var tryagain = document.getElementById("tryagain").style.visibility = "visible";
+        return; // Exit to prevent further moves
+    }
 
+    if (currentPlayer == "o" && !gameEnded) {
+        setTimeout(computer, 500); // Computer makes a move after a short delay
     }
-    else if (owin == true){
-        EndGame();
-        window.alert("I won HaHaHa, You can try again but I will beat you!You can try again(click on the safe again)");
-        var tryagain=document.getElementById("tryagain").style.visibility="visible";
-    }
-    changeTurn();
-}  
+}
+
 function iswinningpattern(winpattern, moves){
-    check_pattern = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    for (let i = 0; i<9; i++){
-        check_pattern[i] = winpattern[i]*moves[i]
+    check_pattern = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (let i = 0; i < 9; i++){
+        check_pattern[i] = winpattern[i] * moves[i];
     }
-    for (let j = 0; j<9; j++){
+    for (let j = 0; j < 9; j++){
         if (check_pattern[j] != winpattern[j]){
             return false;
         }
     }
-        return true;
+    return true;
 }
 
 function checkPlayerHasAnyWinningPattern(moves){
-    for (let i=0; i<8; i++){
+    for (let i = 0; i < 8; i++){
         var answeri = iswinningpattern(patterns[i], moves);
-        if (answeri== true){
+        if (answeri == true){
             return true;
         }
     }
@@ -107,44 +103,41 @@ function checkPlayerHasAnyWinningPattern(moves){
 }
 
 function EndGame(){
-    for(let buttonId = 0; buttonId<9; buttonId++){
+    for(let buttonId = 0; buttonId < 9; buttonId++){
         document.getElementById(buttonId).setAttribute("disabled", "disabled");
     }
 }
 
-function reset(){
-    document.getElementById("Xscore").innerHTML = Xscore = 0;
-    document.getElementById("Oscore").innerHTML = Oscore = 0;
-}
-
-function changeTurn(){
-	if (y == 'x') {
-		y = 'o';
-        console.log("Turn changed to: " + y);
-		// if auto player selected
-		if (compturn===true){ computer();
-            console.log("Computer's turn");
-        }
-	}
-	else y = 'x';
-}
-
-function compTrue(){
-    compturn = true;
-    console.log("computer player active")
-}
-
 function computer(){
-    console.log("Computer is making a move...");
-    var avail = []
-    for (let i=0; i<9; i++){
-        if (x[i]==0 && o[i]==0){
+    var avail = [];
+    for (let i = 0; i < 9; i++){
+        if (x[i] == 0 && o[i] == 0){
             avail.push(i);
         }
     }
-    var RandomNum= Math.floor(Math.random()*avail.length);
-    console.log(RandomNum);
-    var compbutton= document.getElementById(avail[RandomNum]);
-    markCheck(compbutton);
-    console.log(compbutton);
+    var RandomNum = Math.floor(Math.random() * avail.length);
+    var compbutton = document.getElementById(avail[RandomNum]);
+    compbutton.setAttribute("value", "o");
+    compbutton.setAttribute("class", "green-player");
+    console.log("computer O marked", compbutton.id);
+    o[compbutton.id] = 1;
+    compbutton.setAttribute("disabled", "disabled");
+    counter++;
+
+    var owin = checkPlayerHasAnyWinningPattern(o);
+    if (owin == true){
+        gameEnded = true; // Set the flag to indicate the game has ended
+        EndGame();
+        window.alert("I won HaHaHa, You can try again but I will beat you! You can try again (click on the safe again)");
+        var tryagain = document.getElementById("tryagain").style.visibility = "visible";
+    } else if (counter == 9) {
+        alert("Draw! Try again (click on the safe again)");
+        var tryagain = document.getElementById("tryagain").style.visibility = "visible";
+    }
+
+    currentPlayer = "x"; // Switch back to user's turn
+}
+
+function homepage(){
+    window.location.href = "../index.html";
 }
