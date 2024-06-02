@@ -1,3 +1,23 @@
-body{
+body {
     background-image: url("wall.jpg");
+    font-family: Arial, sans-serif;
+}
+
+#all {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.suspects {
+    text-align: center;
+    margin: 10px;
+}
+
+.suspects img {
+    width: 200px; 
+    height: auto; 
 }

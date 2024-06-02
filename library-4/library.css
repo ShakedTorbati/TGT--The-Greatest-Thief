@@ -1,0 +1,23 @@
+#background{
+    width: 1313px;
+    height: 625px;
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    z-index: 1;
+}
+#books1{
+    position: absolute;
+    top: 370px; 
+    left: 525px; 
+}
+#books2{
+    position: absolute;
+    top: 200px; 
+    left: 600px; 
+}
+.books{
+    width: 100px;
+    height: 50px;
+    z-index: 2;
+}
