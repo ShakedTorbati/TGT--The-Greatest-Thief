@@ -16,6 +16,9 @@
 }
 #books2{
     position: absolute;
-    top: 200px; 
-    left: 600px; 
+    top: 380px; 
+    left: 140px; 
+    width: 70px;
+    height: 40px;
+    z-index: 2;
 }
