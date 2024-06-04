@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #rooms{
     background-color: rgb(235, 81, 112);
@@ -85,4 +86,8 @@ img{
     cursor: pointer;
     align-items: center;
     border-radius: 20%;
+=======
+body{
+background-color: rgb(232, 67, 100);
+>>>>>>> 1026db58453b5675ac45dcafc12eb4fba85b2a2c
 }
