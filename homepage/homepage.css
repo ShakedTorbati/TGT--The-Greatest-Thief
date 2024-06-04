@@ -1,4 +1,88 @@
 
-body{
-background-color: rgb(232, 67, 100);
+#rooms{
+    background-color: rgb(235, 81, 112);
+    height:600px;
+    width: 1000px;
+    align-items: center;
+    display:flex;
+    border-radius:5%;
+
+    
+
+}
+#r1{
+    /*bedroom*/
+    background-color: rgb(92, 179, 246);
+    height:200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+
+
+}
+#r2{
+   /*character or wall*/
+    background-color: rgb(209, 108, 226);
+    height:200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+
+}
+#r3{
+    /*clothest room*/
+    background-color: rgb(201, 77, 141);
+    height:200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+
+}
+#r4{
+     /*salon*/
+    background-color: rgb(87, 193, 97);
+    height:200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+
+}
+#r5{
+    /*libarary*/
+    background-color: rgb(209, 123, 19);
+    height:200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+
+}
+#r6{
+    /*work room*/
+    background-color: rgb(202, 175, 24);
+    height:200px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+
+}
+#up{
+    display:flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#down{
+    display:flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+img{
+    height:100px;
+    width: 180px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 20%;
 }
