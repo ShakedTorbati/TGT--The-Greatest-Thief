@@ -10,3 +10,6 @@ function books3(){
 function books4(){
     alert("Nop, wrong one4");
 }
+function homepage(){
+    window.location.href = "../homepage/homepage.html";
+}

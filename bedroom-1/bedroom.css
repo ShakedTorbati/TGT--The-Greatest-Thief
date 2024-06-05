@@ -19,3 +19,25 @@ p {
     top: 700px; 
     left: 70px;
     }
+    #homepage{
+        visibility: hidden;
+        font-size: 18px;
+        color: #333;
+        background-color: #ffc107;
+        border: 2px solid #333;
+        border-radius: 50px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    #homepage:hover{
+        background-color: #ffca28;
+        color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    #homepage:active{
+        background-color: #ffb300;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    }
