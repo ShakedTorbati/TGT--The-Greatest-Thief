@@ -1,12 +1,22 @@
-<<<<<<< HEAD
+body{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+
+     
+}
+
 
 #rooms{
     background-color: rgb(235, 81, 112);
     height:600px;
     width: 1000px;
-    align-items: center;
+    /*align-items: center;
     display:flex;
-    border-radius:5%;
+    border-radius:5%;*/
 
     
 
@@ -18,7 +28,6 @@
     width: 200px;
     align-items: center;
     border-radius: 2%;
-
 
 }
 #r2{
@@ -58,7 +67,6 @@
 
 }
 #r6{
-    /*work room*/
     background-color: rgb(202, 175, 24);
     height:200px;
     width: 200px;
@@ -66,28 +74,24 @@
     border-radius: 2%;
 
 }
-#up{
+#up, #down{
     display:flex;
     justify-content: space-around;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: nowrap;
+    /*flex-direction: column;*/
+    justify-content: center;
+}
+#up{
+    margin-bottom: 30px;
+    margin-top: 60px;
 }
 #down{
-    display:flex;
-    justify-content: space-around;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+    margin-top: 30px;
 }
 img{
     height:100px;
     width: 180px;
     cursor: pointer;
-    align-items: center;
-    border-radius: 20%;
-=======
-body{
-background-color: rgb(232, 67, 100);
->>>>>>> 1026db58453b5675ac45dcafc12eb4fba85b2a2c
+    align-items: center
+    border: 20%;
 }
