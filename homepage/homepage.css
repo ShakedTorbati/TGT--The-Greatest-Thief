@@ -94,9 +94,6 @@ body {
     margin-right: 10px; 
 }
 
-#logo h1 {
-    margin: 0;
-}
 #up {
     margin-bottom: 50px; 
     margin-top: 60px;
@@ -104,6 +101,9 @@ body {
 
 #down {
     margin-top: 20px; 
+}
+#title{
+    width: 700px;
 }
 
 
