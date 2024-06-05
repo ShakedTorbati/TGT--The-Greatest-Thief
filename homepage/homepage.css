@@ -1,97 +1,69 @@
-body{
-    flex-direction: column;
+body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-
-     
 }
 
-
-#rooms{
+#rooms {
     background-color: rgb(235, 81, 112);
-    height:600px;
+    height: 600px;
     width: 1000px;
-    /*align-items: center;
-    display:flex;
-    border-radius:5%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5%;
+}
 
-    
-
+#r1, #r2, #r3, #r4, #r5, #r6 {
+    height: 150px;
+    width: 200px;
+    align-items: center;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
 }
 #r1{
-    /*bedroom*/
-    background-color: rgb(92, 179, 246);
-    height:200px;
-    width: 200px;
-    align-items: center;
-    border-radius: 2%;
-
+    background-color:rgba(81, 81, 224, 0.847);
 }
 #r2{
-   /*character or wall*/
-    background-color: rgb(209, 108, 226);
-    height:200px;
-    width: 200px;
-    align-items: center;
-    border-radius: 2%;
-
+    background-color:rgba(111, 233, 166, 0.847);
 }
 #r3{
-    /*clothest room*/
-    background-color: rgb(201, 77, 141);
-    height:200px;
-    width: 200px;
-    align-items: center;
-    border-radius: 2%;
-
+    background-color:rgba(211, 140, 235, 0.847);
 }
 #r4{
-     /*salon*/
-    background-color: rgb(87, 193, 97);
-    height:200px;
-    width: 200px;
-    align-items: center;
-    border-radius: 2%;
-
+    background-color:rgba(220, 31, 220, 0.847);
 }
 #r5{
-    /*libarary*/
-    background-color: rgb(209, 123, 19);
-    height:200px;
-    width: 200px;
-    align-items: center;
-    border-radius: 2%;
-
+    background-color:rgba(254, 155, 33, 0.847);
 }
 #r6{
-    background-color: rgb(202, 175, 24);
-    height:200px;
-    width: 200px;
-    align-items: center;
-    border-radius: 2%;
+    background-color:rgba(232, 234, 136, 0.847);
+}
 
-}
-#up, #down{
-    display:flex;
+#up, #down {
+    display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
-    /*flex-direction: column;*/
-    justify-content: center;
+    width: 100%;
 }
-#up{
+
+#up {
     margin-bottom: 30px;
     margin-top: 60px;
 }
-#down{
+
+#down {
     margin-top: 30px;
 }
-img{
-    height:100px;
+
+img {
+    height: 100px;
     width: 180px;
     cursor: pointer;
-    align-items: center
-    border: 20%;
 }

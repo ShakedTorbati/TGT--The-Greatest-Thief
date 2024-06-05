@@ -139,5 +139,5 @@ function computer(){
 }
 
 function homepage(){
-    window.location.href = "../index.html";
+    window.location.href = "../homepage/homepage.html";
 }

@@ -1,23 +1,24 @@
 function gotobedroom(){
-    window.location.href="../bedroom-1/bedroom.html"
+    window.location.href="../bedroom-1/bedroom.html";
 }
 
 function gotocharacters(){
-    window.location.href="../wall-2/wall.html"
+    window.location.href="../wall-2/wall.html";
 }
 
 function gotoclothest(){
-    window.location.href="../living room-3/living_room.html"
+    window.location.href="../closet_room-4/closetroom.html";
 }
 
 function gotosalon(){
-    window.location.href="..//wall.html"
+    window.location.href="../living room-3/living_room.html";
 }
 
-function gotocharacters(){
-    window.location.href="../wall-2/wall.html"
+function gotolibarary(){
+    window.location.href="../library-4/library.html";
 }
 
-function gotocharacters(){
-    window.location.href="../wall-2/wall.html"
+function gotoworkroom(){
+    window.location.href="../workroom-5/workroom.html";
 }
+

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
-    <link rel="stylesheet"  href="homepage.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="homepage.js" defer></script>
 </head>
 <body>
-    <center>
     <div id="rooms">
         <div id="up">
             <div id="r1">
@@ -15,31 +15,28 @@
                 <img src="bed_room.jpg" onclick="gotobedroom()">
             </div>   
             <div id="r2">
-                <button>caharacters room<br> wall</button>
+                <button>characters room<br> wall</button>
                 <img src="wall.jpg" onclick="gotocharacters()">
             </div>   
             <div id="r3">
-                <button>clothest room<br> clue 1</button>
-                <img src="closet room.jpg" onclick="gotoclothest()">
+                <button>Living room<br> clue 1</button>
+                <img src="living room.jpg" onclick="gotosalon()">
             </div> 
         </div>
-        <br><br>  
-        <div id="down">
+        <div id="down">            
             <div id="r4">
-                <button >salon <br> clue 2 </button>
-                <img src="living room.jpg" onclick="gotosalon()">
-            </div>   
+                <button>clothes room<br> clue 2</button>
+                <img src="closet room.jpg" onclick="gotoclothest()">  
+            </div>
             <div id="r5">
-                <button>libarary room <br> clue 3</button>
-                <img src="library.jpg " onclick="gotolibarary()">
-            </div>  
+                <button>library room <br> clue 3</button>
+                <img src="library.jpg" onclick="gotolibarary()">
+            </div>
             <div id="r6">
-                <button>work room <br> finding the theaf</button>
+                <button>work room <br> finding the thief</button>
                 <img src="work room.jpg" onclick="gotoworkroom()">
             </div>    
         </div>
     </div>
-</center>
 </body>
-<script src="homepage.js"></script>
 </html>
