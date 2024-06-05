@@ -68,7 +68,6 @@ img {
     cursor: pointer;
 }
 #homepage{
-    visibility: hidden;
     font-size: 18px;
     color: #333;
     background-color: #ffc107;

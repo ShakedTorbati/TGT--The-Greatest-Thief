@@ -15,7 +15,7 @@ function gotosalon(){
 }
 
 function gotolibarary(){
-    window.location.href="../library-4/library.html";
+    window.location.href="../library-5/library.html";
 }
 
 function gotoworkroom(){

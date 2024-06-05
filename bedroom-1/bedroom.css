@@ -20,7 +20,6 @@ p {
     left: 70px;
     }
     #homepage{
-        visibility: hidden;
         font-size: 18px;
         color: #333;
         background-color: #ffc107;
@@ -31,7 +30,12 @@ p {
         letter-spacing: 1px;
         font-weight: bold;
         transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        z-index: 2;
+        position: absolute;
+        top: 10px; 
+        left: 10px; 
     }
+    
     #homepage:hover{
         background-color: #ffca28;
         color: #fff;

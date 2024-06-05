@@ -1,5 +1,4 @@
 #homepage{
-    visibility: hidden;
     font-size: 18px;
     color: #333;
     background-color: #ffc107;
@@ -19,4 +18,12 @@
 #homepage:active{
     background-color: #ffb300;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+#background{
+    width: 1313px;
+    height: 625px;
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    z-index: 1;
 }

@@ -2,7 +2,6 @@ body{
     background-image: url("living_room.jpg");
 }
 #homepage{
-    visibility: hidden;
     font-size: 18px;
     color: #333;
     background-color: #ffc107;
