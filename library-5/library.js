@@ -5,9 +5,7 @@ function books2(){
     alert("Nop, wrong one2")
 }
 function books3(){
-    alert("hi")
-    var open_book=document.getElementById("open_book");
-    open_book.style.visibility="visible";
+    alert("The clue is that the thief didn't have sunglasses")
 }
 function books4(){
     alert("Nop, wrong one4");

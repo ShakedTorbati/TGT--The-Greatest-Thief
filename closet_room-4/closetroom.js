@@ -135,7 +135,7 @@ function computer(){
         var tryagain = document.getElementById("tryagain").style.visibility = "visible";
     }
 
-    currentPlayer = "x"; // Switch back to user's turn
+    currentPlayer = "x"; 
 }
 
 function homepage(){

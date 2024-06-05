@@ -19,6 +19,6 @@ function gotolibarary(){
 }
 
 function gotoworkroom(){
-    window.location.href="../workroom-5/workroom.html";
+    window.location.href="../workroom-6/workroom.html";
 }
 
