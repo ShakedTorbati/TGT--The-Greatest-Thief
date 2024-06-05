@@ -53,16 +53,8 @@ body {
     width: 100%;
 }
 
-#up {
-    margin-bottom: 30px;
-    margin-top: 60px;
-}
 
-#down {
-    margin-top: 30px;
-}
-
-img {
+.img {
     height: 100px;
     width: 180px;
     cursor: pointer;
@@ -88,3 +80,30 @@ img {
     background-color: #ffb300;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px; 
+}
+
+#logo h1 {
+    margin: 0;
+}
+#up {
+    margin-bottom: 50px; 
+    margin-top: 60px;
+}
+
+#down {
+    margin-top: 20px; 
+}
+
+
