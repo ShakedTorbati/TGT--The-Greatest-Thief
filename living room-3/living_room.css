@@ -1,4 +1,4 @@
-#background {
+/*#background {
     width: 1330px;
     height: 625px;
     position: absolute;
@@ -35,7 +35,16 @@
     z-index: 3;
     position: absolute; 
     top: 50px; 
-    left: 850px;
+    left: 50px;
     width: 400px; 
     height: 200px; 
+}
+
+h1{
+    text-align: left;
+}
+
+#letter{
+    width: 1330px;
+    height: 625px; 
 }
