@@ -34,8 +34,8 @@
 #picture {
     z-index: 3;
     position: absolute; 
-    top: 100px; 
-    left: 100px;
-    width: 500px; 
+    top: 50px; 
+    left: 850px;
+    width: 400px; 
     height: 200px; 
 }
