@@ -30,6 +30,11 @@
     background-color: #ffb300;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
+#board-container img {
+    width: 200px; 
+    height: auto; 
+    z-index: 2;
+}
 
 #picture {
     z-index: 3;
