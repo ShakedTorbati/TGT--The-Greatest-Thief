@@ -1,8 +1,17 @@
-function note(){
-    var note= document.getElementById("note");
-    note.style.width="500px";
-    note.style.height="500px";
+function note() {
+    var p1 = document.getElementById("p1");
+    var p2 = document.getElementById("p2");
+    p1.classList.toggle("visible");
+    p2.classList.toggle("visible");
 }
-function homepage(){
+
+function closeNote() {
+    var p1 = document.getElementById("p1");
+    var p2 = document.getElementById("p2");
+    p1.classList.remove("visible");
+    p2.classList.remove("visible");
+}
+
+function homepage() {
     window.location.href = "../homepage/homepage.html";
 }

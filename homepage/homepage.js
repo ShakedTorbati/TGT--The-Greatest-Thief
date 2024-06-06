@@ -1,5 +1,5 @@
 function gotobedroom(){
-    window.location.href="../bedroom-1/bedroom.html";
+    window.location.href="../index.html";
 }
 
 function gotocharacters(){
