@@ -21,7 +21,8 @@ body {
     width: 200px; 
     height: auto; 
 }
-#homepage{
+
+#homepage {
     font-size: 18px;
     color: #333;
     background-color: #ffc107;
@@ -33,12 +34,46 @@ body {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
-#homepage:hover{
+
+#homepage:hover {
     background-color: #ffca28;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-#homepage:active{
+
+#homepage:active {
     background-color: #ffb300;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#info {
+    visibility: hidden;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 300px;
+}
+
+#info_p {
+    margin: 0;
+}
+
+#close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+
+#close-button:hover {
+    background-color: red;
+    color: white;
 }

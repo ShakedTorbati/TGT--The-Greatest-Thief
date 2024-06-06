@@ -12,21 +12,25 @@
     <h1>Meet the suspects</h1>
     <div id="all">
         <div id="card_thief" class="suspects">
-            <button><img src="card thief.jpg"></button>
+            <button><img src="card thief.jpg" onclick="bell()"></button>
             <p>Bell</p>
         </div>
         <div id="key_thief" class="suspects">
-            <button><img src="key thief.jpg"></button>
+            <button><img src="key thief.jpg" onclick=""></button>
             <p>Scarlett</p>
         </div>
         <div id="suitcase" class="suspects">
             <button><img src="ladder thief.jpg"></button>
-            <p>Bruce</p>
-        </div>
-        <div id="ladder_thief" class="suspects">
-            <button><img src="suitcase man.jpg"></button>
             <p>Miguel</p>
         </div>
+        <div id="ladder_thief" class="suspects"> 
+            <button><img src="suitcase man.jpg"></button>
+            <p>Bruce</p>
+        </div>
+    </div>
+    <div id="info">
+        <button id="close-button" onclick="closeInfo()">X</button>
+        <p id="info_p"></p>
     </div>
     <center><button id="homepage" onclick="homepage()">Go to homepage</button></center>
 </body>
