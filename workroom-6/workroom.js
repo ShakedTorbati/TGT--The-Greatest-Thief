@@ -1,6 +1,7 @@
 function poppic(){
-   /* woodbord.style.width="500px";
-    woodbord.style.height="500px";*/
+    woodbord2=document.getElementById("picture")
+    woodbord2.style.width="500px";
+    woodbord2.style.height="500px";
     alert("kfjhkfakf")
 }
 function homepage(){

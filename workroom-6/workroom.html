@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="workroom.css">
     <link rel="icon" type="image/x-icon" href="Logo.png">
     <script src="workroom.js"></script>
 </head>
 <body>
-    <div  id="background">
-        <img src="work_room.jpg">
-    </div>
+    
+    <img src="work_room.jpg"  id="background">
     <center><button id="homepage" onclick="homepage()">Go to homepage</button></center>
-    <img src="woodbord2.png" id="woodbord2" onclick="poppic()">
+    <img src="woodbord2.png" id="picture" onclick="poppic()">
+
+    <div id="board-container" style="display: none;"> 
+    <div class="button" style="top: 10%; left: 20%;"></div> 
+    <div class="button" style="top: 10%; right: 20%;"></div> 
+    <div class="button" style="top: 40%; left: 20%;"></div> 
+    <div class="button" style="top: 40%; right: 20%;"></div> 
+    <div class="button" style="bottom: 10%; left: 20%;"></div> 
+    <div class="button" style="bottom: 10%; right: 20%;"></div> 
+    <div class="button" style="bottom: 40%; left: 20%;"></div> 
+    <div class="button" style="bottom: 40%; right: 20%;"></div> </div>
 </body>
-</html> 
+</html>
