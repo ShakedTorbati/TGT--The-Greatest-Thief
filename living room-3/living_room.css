@@ -35,5 +35,7 @@
     z-index: 3;
     position: absolute; 
     top: 100px; 
-    left: 100px; 
+    left: 100px;
+    width: 500px; 
+    height: 200px; 
 }
