@@ -25,5 +25,12 @@
     position: absolute;
     top: -40px;
     left: -50px;
-    z-index: 1;
+   z-index: 1;
+}
+#woodbord{
+    /*z-index: 2;
+    position: absolute;*/
+    position:relative;
+    top:0;
+
 }
