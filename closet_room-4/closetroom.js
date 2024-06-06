@@ -5,8 +5,7 @@ var currentPlayer = 'x'; // Track the current player
 
 function generateGame(){
     var tryagain = document.getElementById("tryagain").style.visibility = "hidden";
-    alert("To know the next clue, you'll have to beat me! Click the start button to try to find the clue!");
-    var start = document.getElementById("start").style.visibility = "visible";
+    alert("To know the next clue, you'll have to beat me!");
     x = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     o = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     counter = 0;
@@ -69,7 +68,7 @@ function markCheck(obj){
         var homepage = document.getElementById("homepage").style.visibility = "visible";
         return; // Exit to prevent further moves
     } else if (counter == 9) {
-        alert("Draw! Try again (click on the safe again)");
+        alert("Draw! Try again");
         var tryagain = document.getElementById("tryagain").style.visibility = "visible";
         return; // Exit to prevent further moves
     }
@@ -128,7 +127,7 @@ function computer(){
     if (owin == true){
         gameEnded = true; // Set the flag to indicate the game has ended
         EndGame();
-        window.alert("I won HaHaHa, You can try again but I will beat you! You can try again (click on the safe again)");
+        window.alert("I won HaHaHa, You can try again but I will beat you! You can try again");
         var tryagain = document.getElementById("tryagain").style.visibility = "visible";
     } else if (counter == 9) {
         alert("Draw! Try again (click on the safe again)");

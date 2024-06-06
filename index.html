@@ -2,15 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="homepage" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedroom</title>
+    <script src="./bedroom-1/bedroom.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./bedroom-1/bedroom.css">
+    <link rel="icon" type="image/x-icon" href="./bedroom-1/Logo.png">
 </head>
 <body>
-    <div id="bed_room" class="boxes"></div>
-    <div id="closet_room" class="boxes"></div>
-    <div id="libarary" class="boxes"></div>
-    <div id="living_room" class="boxes"></div>
-    <div id="wall" class="boxes"></div>
-    <div id="work_room" class="boxes"></div>
+    <img src="./bedroom-1/bed_room.jpg" id="background">
+    <div id="note-container">
+        <button onclick="note()"><img src="./bedroom-1/note.png" id="note"></button>
+        <div id="p1" class="p-content">
+            <button class="close-btn" onclick="closeNote()">X</button>
+            <p>Welcome to the Online Clue Game!<br>
+            Objective:<br>
+            Uncover the identity of the thief among four suspects.<br>
+            Gameplay:<br>
+            Navigate through the rooms in order: Starting from the top left corner, proceed to the bottom right corner, visiting three rooms in total.<br>
+            Gather clues: In each room, you will find a clue that you must memorize.<br>
+            Solve the mystery: Once you have all three clues, proceed to the final interrogation room to identify the thief.<br><br>
+            </p>
+        </div>
+        <div id="p2" class="p-content">
+            <button class="close-btn" onclick="closeNote()">X</button>
+            <p>
+            Story:<br>
+            In the heart of the bustling city, a daring heist has taken place! A priceless artifact has stolen from the Oakhaven Manor!<br>
+            You have been summoned to unravel the mystery. Your mission is to navigate through the many rooms of the manor,  figure out the hidden clues , and expose the thief.<br>
+            Embark on your quest, detectives! The fate of Oakhaven Manor's legacy rests in your hands.
+            </p>
+        </div>
+    </div>
+    <center><button id="homepage" onclick="homepage()">Go to homepage</button></center>
 </body>
 </html>

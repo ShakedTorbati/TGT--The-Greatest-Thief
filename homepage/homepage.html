@@ -6,35 +6,40 @@
     <title>homepage</title>
     <link rel="stylesheet" href="homepage.css">
     <script src="homepage.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="Logo.png">
 </head>
 <body>
     <div id="rooms">
         <div id="up">
             <div id="r1">
                 <button>bedroom <br>instructions</button>
-                <img src="bed_room.jpg" onclick="gotobedroom()">
+                <img src="bed_room.jpg" onclick="gotobedroom()" class="img">
             </div>   
             <div id="r2">
                 <button>characters room<br> wall</button>
-                <img src="wall.jpg" onclick="gotocharacters()">
+                <img src="wall.jpg" onclick="gotocharacters()" class="img">
             </div>   
             <div id="r3">
                 <button>Living room<br> clue 1</button>
-                <img src="living room.jpg" onclick="gotosalon()">
+                <img src="living room.jpg" onclick="gotosalon()" class="img">
             </div> 
         </div>
+        <div id="logo" class="logo-container">
+            <img src="Logo.png" class="logo">
+            <img src="title.png" id="title">
+        </div>        
         <div id="down">            
             <div id="r4">
                 <button>clothes room<br> clue 2</button>
-                <img src="closet room.jpg" onclick="gotoclothest()">  
+                <img src="closet room.jpg" onclick="gotoclothest()" class="img">  
             </div>
             <div id="r5">
                 <button>library room <br> clue 3</button>
-                <img src="library.jpg" onclick="gotolibarary()">
+                <img src="library.jpg" onclick="gotolibarary()" class="img">
             </div>
             <div id="r6">
                 <button>work room <br> finding the thief</button>
-                <img src="work room.jpg" onclick="gotoworkroom()">
+                <img src="work room.jpg" onclick="gotoworkroom()" class="img">
             </div>    
         </div>
     </div>

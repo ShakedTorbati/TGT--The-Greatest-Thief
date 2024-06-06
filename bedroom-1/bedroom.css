@@ -1,15 +1,82 @@
-#background{
-    width: 1313px;
+#background {
+    width: 1330px;
     height: 625px;
     position: absolute;
     top: -40px;
     left: -50px;
     z-index: 1;
 }
+
 #note {
     width: 100px;
     position: absolute;
-    top: 70px; 
-    left: 700px; 
+    top: 70px;
+    left: 700px;
     z-index: 2;
 }
+
+#note-container {
+    position: relative;
+}
+
+#p1, #p2 {
+    visibility: hidden;
+    position: absolute;
+    top: 70px;
+    left: 700px;
+    width: 100px; /* Set the width to match the button's width */
+    height: 100px; /* Set the height to match the button's height */
+    z-index: 2;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for size change */
+}
+
+#p1.visible, #p2.visible {
+    visibility: visible;
+    width: 400px; /* Expanded width */
+    height: 300px; /* Expanded height */
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+#homepage {
+    font-size: 18px;
+    color: #333;
+    background-color: #ffc107;
+    border: 2px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#homepage:hover {
+    background-color: #ffca28;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#homepage:active {
+    background-color: #ffb300;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+
