@@ -1,3 +1,4 @@
+alert("Click on the suspects to get to know them. Pay attention to everything; it may help you!")
 function show(){
     var info = document.getElementById("info").style.visibility="visible";
     var info_p = document.getElementById("info_p");
